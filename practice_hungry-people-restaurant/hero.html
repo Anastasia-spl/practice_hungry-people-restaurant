@@ -1,0 +1,112 @@
+<section class="hero">
+  <!-- <picture class="hero__picture _ibg">
+    <source type="image/webp" srcset="
+                                                    ./images/hero.webp ,
+                                                    ./images/hero@2x.webp   ,
+                                                    ./images/hero@3x.webp
+                                                  "  />
+    <source srcset="
+                                                    ./images/hero.jpg      ,
+                                                    ./images/hero2x.jpg   ,
+                                                    ./images/galerie4-1425@3x.jpg 1080w
+                                                  " />
+    <img src="./images/galerie4.jpg" alt="Hall photo" class="_ibg"/>
+  </picture> -->
+  <div class="container">
+    <div class="hero__content">
+      <span class="hero__schedule">Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM</span>
+      <div class="hero__center">
+        <span class="hero__subtitle">Restaurant</span>
+        <h1 class="hero__title">Hungry people</h1>
+        <div class="hero__btn-wrapper">
+          <button class="btn" data-open-modal-book>Book table</button>
+          <button class="btn btn--transp">Explore</button>
+        </div>
+        <div class="decorative-line-l"></div>
+        <div class="decorative-line-mt"></div>
+        <div class="decorative-line-mb"></div>
+        <div class="decorative-line-r"></div>
+      </div>
+
+      <ul class="socials list">
+        <li class="socials__item">
+          <a href="" class="link socials__link">
+            <div class="socials__icon-wrapper">
+              <svg class="socials__icon">
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg></div>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="" class="link socials__link">
+            <div class="socials__icon-wrapper">
+              <svg class="socials__icon">
+                <use href="./images/sprite.svg#icon-twitter"></use>
+              </svg></div>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="" class="link socials__link">
+            <div class="socials__icon-wrapper">
+              <svg class="socials__icon">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg></div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <button class="btn-down" data-hero-btn>
+      <div class="icon-down-wrapper">
+        <svg class="icon-down">
+          <use href="./images/sprite.svg#icon-angle-down"></use>
+        </svg>
+      </div>
+    </button>
+
+    <div class="modal-book__overlay" data-modal-backdrop>
+
+      <div class="modal-book__content">
+        <button class="close-btn" data-close-modal-book type="button">
+          <svg class="menu-svg" aria-label="Переключатель мобильного меню">
+            <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <div class="booking__content-wrapper">
+          <h2 class="title">Book a table</h2>
+          <form class="booking__form">
+            <div class="booking__input-group-wrapper">
+              <div class="booking__input-group">
+                <div class="booking__form-field">
+                  <input type="text" class="booking__input" placeholder="Name" />
+                </div>
+                <div class="booking__form-field">
+                  <input type="tel" class="booking__input" placeholder="Phone" />
+                </div>
+                <div class="booking__form-field">
+                  <input type="number" class="booking__input" placeholder="Date (mm/dd)" />
+                </div>
+              </div>
+              <div class="booking__input-group">
+                <div class="booking__form-field">
+                  <input type="email" class="booking__input" placeholder="Email" />
+                </div>
+                <div class="booking__form-field">
+                  <input type="number" class="booking__input" placeholder="People" />
+                </div>
+
+                <div class="booking__form-field">
+                  <input type="number" class="booking__input" placeholder="Time" />
+                </div>
+              </div>
+            </div>
+            <button class="btn">Book now</button>
+          </form>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <!-- <div class="visually-hidden" data-btn-top-sentinel></div> -->
+</section>

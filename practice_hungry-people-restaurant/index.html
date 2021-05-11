@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Hungry people</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+  </head>
+  <body>
+   <header class="header">
+  <div class="container">
+    <nav class="nav" data-nav data-da=".mobile-nav__content, 767, first">
+      <ul class="nav__list list">
+        <li class="nav__item">
+          <a class="nav__link link" href="#home">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#about">About</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#team">Team</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#booking">Booking</a>
+        </li>
+      </ul>
+      <ul class="nav__list list">
+        <li class="nav__item">
+          <a class="nav__link link" href="#menu">Menu</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#galerie">Galerie</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#events">Events</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link" href="#contacts">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <svg class="logo__icon">
+      <use href="./images/sprite.svg#icon-helm"></use>
+    </svg>
+    <button class="menu-button" data-nav-btn type="button">
+      <svg class="menu-svg" aria-label="mobile navigation toggler">
+        <use class="icon-burger" href="./images/sprite.svg#burger"></use>
+        <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <div class="mobile-nav__overlay" data-mobile-navigation>
+      <div class="mobile-nav__content"></div>
+    </div>
+  </div>
+</header>
+    <main>
+     <section class="hero">
+  <!-- <picture class="hero__picture _ibg">
+    <source type="image/webp" srcset="
+                                                    ./images/hero.webp ,
+                                                    ./images/hero@2x.webp   ,
+                                                    ./images/hero@3x.webp
+                                                  "  />
+    <source srcset="
+                                                    ./images/hero.jpg      ,
+                                                    ./images/hero2x.jpg   ,
+                                                    ./images/galerie4-1425@3x.jpg 1080w
+                                                  " />
+    <img src="./images/galerie4.jpg" alt="Hall photo" class="_ibg"/>
+  </picture> -->
+  <div class="container">
+    <div class="hero__content">
+      <span class="hero__schedule">Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM</span>
+      <div class="hero__center">
+        <span class="hero__subtitle">Restaurant</span>
+        <h1 class="hero__title">Hungry people</h1>
+        <div class="hero__btn-wrapper">
+          <button class="btn" data-open-modal-book>Book table</button>
+          <button class="btn btn--transp">Explore</button>
+        </div>
+        <div class="decorative-line-l"></div>
+        <div class="decorative-line-mt"></div>
+        <div class="decorative-line-mb"></div>
+        <div class="decorative-line-r"></div>
+      </div>
+
+      <ul class="socials list">
+        <li class="socials__item">
+          <a href="" class="link socials__link">
+            <div class="socials__icon-wrapper">
+              <svg class="socials__icon">
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg></div>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="" class="link socials__link">
+            <div class="socials__icon-wrapper">
+              <svg class="socials__icon">
+                <use href="./images/sprite.svg#icon-twitter"></use>
+              </svg></div>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="" class="link socials__link">
+            <div class="socials__icon-wrapper">
+              <svg class="socials__icon">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg></div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <button class="btn-down" data-hero-btn>
+      <div class="icon-down-wrapper">
+        <svg class="icon-down">
+          <use href="./images/sprite.svg#icon-angle-down"></use>
+        </svg>
+      </div>
+    </button>
+
+    <div class="modal-book__overlay" data-modal-backdrop>
+
+      <div class="modal-book__content">
+        <button class="close-btn" data-close-modal-book type="button">
+          <svg class="menu-svg" aria-label="Переключатель мобильного меню">
+            <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <div class="booking__content-wrapper">
+          <h2 class="title">Book a table</h2>
+          <form class="booking__form">
+            <div class="booking__input-group-wrapper">
+              <div class="booking__input-group">
+                <div class="booking__form-field">
+                  <input type="text" class="booking__input" placeholder="Name" />
+                </div>
+                <div class="booking__form-field">
+                  <input type="tel" class="booking__input" placeholder="Phone" />
+                </div>
+                <div class="booking__form-field">
+                  <input type="number" class="booking__input" placeholder="Date (mm/dd)" />
+                </div>
+              </div>
+              <div class="booking__input-group">
+                <div class="booking__form-field">
+                  <input type="email" class="booking__input" placeholder="Email" />
+                </div>
+                <div class="booking__form-field">
+                  <input type="number" class="booking__input" placeholder="People" />
+                </div>
+
+                <div class="booking__form-field">
+                  <input type="number" class="booking__input" placeholder="Time" />
+                </div>
+              </div>
+            </div>
+            <button class="btn">Book now</button>
+          </form>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <!-- <div class="visually-hidden" data-btn-top-sentinel></div> -->
+</section>
+     <section class="about" id="about">
+  <div class="container">
+    <div class="about__wrapper">
+      <div class="about__content-wrapper">
+        <h2 class="title">About us</h2>
+        <p class="about__text--b">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+          velit maximus, molestie est a, tempor magna.
+        </p>
+        <p class="about__text">
+          Integer ullamcorper neque eu purus euismod, ac faucibus mauris
+          posuere. Morbi non ultrices ligula. Sed dictum, enim sed
+          ullamcorper feugiat, dui odio vehicula eros, a sollicitudin
+          lorem quam nec sem. Mauris tincidunt feugiat diam convallis
+          pharetra. Nulla facilisis semper laoreet.
+        </p>
+      </div>
+      <div class="thumb img-shadow">
+        <picture class="about__picture">
+          <source type="image/webp" srcset="
+                    ./images/about-475.webp      475w,
+                    ./images/about-950@2x.webp   950w,
+                    ./images/about-1425@3x.webp 1425w
+                  " sizes="37vw" />
+          <source srcset="
+                    ./images/about-475.jpg      475w,
+                    ./images/about-950@2x.jpg   950w,
+                    ./images/about-1425@3x.jpg 1425w
+                  " sizes="37vw" />
+          <img src="./images/about.jpg" alt="Cozy firewood in the lobby" />
+        </picture>
+        <div class="decorative-frame--r"></div>
+      </div>
+    </div>
+  </div>
+</section>
+     <section class="team" id="team">
+  <div class="container">
+    <h2 class="title--small">Our team</h2>
+    <div class="team__wrapper">
+      <div class="thumb img-shadow--dark">
+        <picture class="team__picture">
+          <source type="image/webp" srcset="
+                    ./images/masterchef-475.webp      475w,
+                    ./images/masterchef-950@2x.webp   950w,
+                    ./images/masterchef-1425@3x.webp 1425w
+                  " sizes="37vw" />
+          <source srcset="
+                    ./images/masterchef-475.jpg      475w,
+                    ./images/masterchef-950@2x.jpg   950w,
+                    ./images/masterchef-1425@3x.jpg 1425w
+                  " sizes="37vw" />
+          <img src="./images/masterchef.jpg" alt="Masterchef is cooking a dessert" />
+        </picture>
+        <div class="decorative-frame--l"></div>
+      </div>
+      <div class="team__content-wrapper">
+        <h3 class="team__subtitle">Master chef</h3>
+        <p class="team__text--b">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+          velit maximus, molestie est a, tempor magna.
+        </p>
+        <p class="team__text">
+          Integer ullamcorper neque eu purus euismod, ac faucibus mauris
+          posuere. Morbi non ultrices ligula. Sed dictum, enim sed
+          ullamcorper feugiat, dui odio vehicula eros, a sollicitudin
+          lorem quam nec sem. Mauris tincidunt feugiat diam convallis
+          pharetra. Nulla facilisis semper laoreet.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+     <section class="specialties">
+  <div class="container">
+    <h2 class="title--small">Specialties</h2>
+    <div class="specialties__wrapper">
+      <div class="thumb img-shadow--dark">
+        <picture class="specialties__picture">
+          <source type="image/webp" srcset="
+                    ./images/ice-cream-475.webp      475w,
+                    ./images/ice-cream-950@2x.webp   950w,
+                    ./images/ice-cream-1425@3x.webp 1425w
+                  " sizes="37vw" />
+          <source srcset="
+                    ./images/ice-cream-475.jpg      475w,
+                    ./images/ice-cream-950@2x.jpg   950w,
+                    ./images/ice-cream-1425@3x.jpg 1425w
+                  " sizes="37vw" />
+          <img src="./images/ice-cream.jpg" alt="Ice-cream" />
+        </picture>
+        <div class="decorative-frame--l"></div>
+      </div>
+      <div class="specialties__content-wrapper">
+        <h3 class="specialties__subtitle">Chocolate pancakes</h3>
+        <p class="specialties__text--b">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+          velit maximus, molestie est a, tempor magna.
+        </p>
+        <p class="specialties__text">
+          Integer ullamcorper neque eu purus euismod, ac faucibus mauris
+          posuere. Morbi non ultrices ligula. Sed dictum, enim sed
+          ullamcorper feugiat, dui odio vehicula eros, a sollicitudin
+          lorem quam nec sem. Mauris tincidunt feugiat diam convallis
+          pharetra. Nulla facilisis semper laoreet.
+        </p>
+      </div>
+    </div>
+    <ul class="slick-dots list">
+      <li class="item"><button>1</button></li>
+      <li class="slick-active item"><button>2</button></li>
+      <li class="item"><button>2</button></li>
+    </ul>
+  </div>
+</section>
+    <section class="booking" id="booking">
+  <div class="container">
+    <div class="booking__wrapper">
+      <div class="booking__content-wrapper">
+        <h2 class="title">Book a table</h2>
+        <form class="booking__form">
+          <div class="booking__input-group-wrapper">
+            <div class="booking__input-group">
+              <div class="booking__form-field">
+                <input type="text" class="booking__input" placeholder="Name" />
+              </div>
+              <div class="booking__form-field">
+                <input type="tel" class="booking__input" placeholder="Phone" />
+              </div>
+              <div class="booking__form-field">
+                <input type="number" class="booking__input" placeholder="Date (mm/dd)" />
+              </div>
+            </div>
+            <div class="booking__input-group">
+              <div class="booking__form-field">
+                <input type="email" class="booking__input" placeholder="Email" />
+              </div>
+              <div class="booking__form-field">
+                <input type="number" class="booking__input" placeholder="People" />
+              </div>
+
+              <div class="booking__form-field">
+                <input type="number" class="booking__input" placeholder="Time" />
+              </div>
+            </div>
+          </div>
+          <button class="btn">Book now</button>
+        </form>
+      </div>
+      <div class="thumb img-shadow">
+        <picture class="booking__picture">
+          <source type="image/webp" srcset="
+                    ./images/watch-475.webp      475w,
+                    ./images/watch-950@2x.webp   950w,
+                    ./images/watch-1425@3x.webp 1425w
+                  " sizes="37vw" />
+          <source srcset="
+                    ./images/watch-475.jpg      475w,
+                    ./images/watch-950@2x.jpg   950w,
+                    ./images/watch-1425@3x.jpg 1425w
+                  " sizes="37vw" />
+          <img src="./images/watch.jpg" alt="Watch" />
+        </picture>
+        <div class="decorative-frame--r"></div>
+      </div>
+    </div>
+    <p class="booking__schedule">
+      Mon - Fri: <span class="highlighted">8PM - 10PM</span>, Sat - Sun:
+      <span class="highlighted">8PM - 3AM</span>, Phone:
+      <a class="highlighted link" href="tel:+40729131637">+40 729 131 637</a>
+      /
+      <a class="highlighted link" href="tel:+40726458782">+40 726 458 782</a>
+    </p>
+  </div>
+</section>
+    <section class="menu" id="menu">
+  <div class="container">
+    <h2 class="title">Delisious menu</h2>
+    <p class="menu__caption">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+      velit maximus, molestie est a, tempor magna.
+    </p>
+    <ul class="list menu__slick-btns">
+      <li class="menu__sections-item">
+        <button class="menu__sections-button">Soupe</button>
+      </li>
+      <li class="menu__sections-item">
+        <button class="menu__sections-button">Pizza</button>
+      </li>
+      <li class="menu__sections-item">
+        <button class="menu__sections-button">Pasta</button>
+      </li>
+      <li class="menu__sections-item">
+        <button class="menu__sections-button">Desert</button>
+      </li>
+      <li class="menu__sections-item">
+        <button class="menu__sections-button">Wine</button>
+      </li>
+      <li class="menu__sections-item">
+        <button class="menu__sections-button">Beer</button>
+      </li>
+      <li class="menu__sections-item">
+        <button class="menu__sections-button">Drinks</button>
+      </li>
+    </ul>
+    <div class="menu__lists-wrapper">
+      <ul class="list menu__content-list">
+        <li class="menu__content-item">
+          <span class="menu__name">Pizza Quatro Stagioni</span>
+          <span class="menu__item-dots">....</span>
+          <span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item">
+          <span class="menu__name">Pizza Quatro Stagioni</span><span class="menu__item-dots">....</span><span
+            class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+      </ul>
+      <ul class="list menu__content-list">
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+      </ul>
+      <ul class="list menu__content-list">
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+        <li class="menu__content-item"><span class="menu__name">Pizza Quatro Stagioni</span><span
+            class="menu__item-dots">....</span><span class="menu__price">55,68 USD</span>
+          <p class="menu__name-consist">
+            Integer ullamcorper neque eu purus euismod
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="events" id="events">
+  <div class="container">
+    <h2 class="title--small">Private events</h2>
+    <div class="events__wrapper">
+      <div class="thumb img-shadow--dark">
+        <picture class="events__picture">
+          <source type="image/webp" srcset="
+                    ./images/rings-475.webp      475w,
+                    ./images/rings-950@2x.webp   950w,
+                    ./images/rings-1425@3x.webp 1425w
+                  " sizes="37vw" />
+          <source srcset="
+                    ./images/rings-475.jpg      475w,
+                    ./images/rings-950@2x.jpg   950w,
+                    ./images/rings-1425@3x.jpg 1425w
+                  " sizes="37vw" />
+          <img src="./images/rings.jpg" alt="Wedding rings" />
+        </picture>
+        <div class="decorative-frame--l"></div>
+        <div class="events__img-caption">
+          <span class="events__img-caption-text">Weddings</span>
+        </div>
+      </div>
+      <div class="thumb img-shadow--dark">
+        <picture class="events__picture">
+          <source type="image/webp" srcset="
+                    ./images/corporate-475.webp      475w,
+                    ./images/corporate-950@2x.webp   950w,
+                    ./images/corporate-1425@3x.webp 1425w
+                  " sizes="37vw" />
+          <source srcset="
+                    ./images/corporate-475.jpg      475w,
+                    ./images/corporate-950@2x.jpg   950w,
+                    ./images/corporate-1425@3x.jpg 1425w
+                  " sizes="37vw" />
+          <img src="./images/masterchef.jpg" alt="Corporate party" />
+        </picture>
+        <div class="events__img-caption">
+          <span class="events__img-caption-text">Corporate parties</span>
+        </div>
+        <div class="decorative-frame--r"></div>
+      </div>
+    </div>
+    <p class="events__contacts">
+      For private events please call:
+      <a href="tel:+40729131637" class="link highlighted">+40 729 131 637</a>
+      /
+      <a href="tel:+40726458782" class="link highlighted">+40 726 458 782</a>
+      or use the contact form.
+    </p>
+  </div>
+</section>
+    <section class="galerie" id="galerie">
+  <h2 class="visually-hidden">Galerie</h2>
+  <div class="galerie__photo-wrapper">
+    <div class="thumb">
+      <picture class="galerie__picture">
+        <source type="image/webp" srcset="
+                                        ./images/galerie1-360.webp      360w,
+                                        ./images/galerie1-720@2x.webp   720w,
+                                        ./images/galerie1-1080@3x.webp 1080w
+                                      " sizes="37vw" />
+        <source srcset="
+                                        ./images/galerie1-475.jpg      360w,
+                                        ./images/galerie1-950@2x.jpg   720w,
+                                        ./images/galerie1-1425@3x.jpg 1080w
+                                      " sizes="25vw" />
+        <img src="./images/galerie1.jpg" alt="Hall photo" />
+      </picture>
+    </div>
+    <div class="thumb">
+      <picture class="galerie__picture">
+        <source type="image/webp" srcset="
+                                                  ./images/galerie2-360.webp      360w,
+                                                  ./images/galerie2-720@2x.webp   720w,
+                                                  ./images/galerie2-1080@3x.webp 1080w
+                                                " sizes="37vw" />
+        <source srcset="
+                                                  ./images/galerie2-475.jpg      360w,
+                                                  ./images/galerie2-950@2x.jpg   720w,
+                                                  ./images/galerie2-1425@3x.jpg 1080w
+                                                " sizes="25vw" />
+        <img src="./images/galerie2.jpg" alt="Hall photo" />
+      </picture>
+    </div>
+    <div class="thumb">
+      <picture class="galerie__picture">
+        <source type="image/webp" srcset="
+                                                  ./images/galerie3-360.webp      360w,
+                                                  ./images/galerie3-720@2x.webp   720w,
+                                                  ./images/galerie3-1080@3x.webp 1080w
+                                                " sizes="37vw" />
+        <source srcset="
+                                                  ./images/galerie3-475.jpg      360w,
+                                                  ./images/galerie3-950@2x.jpg   720w,
+                                                  ./images/galerie3-1425@3x.jpg 1080w
+                                                " sizes="25vw" />
+        <img src="./images/galerie3.jpg" alt="Hall for corporate party" />
+      </picture>
+    </div>
+    <div class="thumb">
+      <picture class="galerie__picture">
+        <source type="image/webp" srcset="
+                                                  ./images/galerie4-360.webp      360w,
+                                                  ./images/galerie4-720@2x.webp   720w,
+                                                  ./images/galerie4-1080@3x.webp 1080w
+                                                " sizes="37vw" />
+        <source srcset="
+                                                  ./images/galerie4-475.jpg      360w,
+                                                  ./images/galerie4-950@2x.jpg   720w,
+                                                  ./images/galerie4-1425@3x.jpg 1080w
+                                                " sizes="25vw" />
+        <img src="./images/galerie4.jpg" alt="Hall photo" />
+      </picture>
+    </div>
+  </div>
+
+</section>
+    <section class="contacts" id="contacts">
+  <div class="container">
+    <h2 class="title">Contact</h2>
+    <p class="contacts__caption">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+      velit maximus, molestie est a, tempor magna.
+    </p>
+    <form class="contacts__form">
+      <div class="contacts__form-field-wrapper">
+        <div class="contacts__form-field">
+          <input class="contacts__input" id="name" type="text" placeholder=" " utocomplete="off" />
+          <label class="contacts__label" for="name">Name</label>
+        </div>
+
+        <div class="contacts__form-field">
+          <input class="contacts__input" id="email" type="email" placeholder=" " autocomplete="off" />
+          <label class="contacts__label" for="email">Email</label>
+        </div>
+
+        <div class="contacts__form-field">
+          <input class="contacts__input" id="phone" type="tel" placeholder=" " utocomplete="off" />
+          <label class="contacts__label" for="phone">Phone</label>
+        </div>
+      </div>
+
+      <textarea class="contacts__form-textarea" name="user-message" id="user-message" placeholder="Message"></textarea>
+    </form>
+    <div class="address-wrapper">
+      <address class="address">
+        <ul class="list address__list">
+          <li class="address__item">
+            <svg class="address__icon geopos">
+              <use href="./images/sprite.svg#icon-map-marker"></use>
+            </svg>
+            <a class="address__adds link"
+              href="https://www.google.ru/maps/place/BOULEVARD+LONDON/@51.52988,-0.1694972,16z/data=!4m5!3m4!1s0x48761b40f15e6581:0x585aae465109897d!8m2!3d51.5296223!4d-0.1675655">5th
+              London Boulevard, U.K.</a>
+          </li>
+          <li class="address__item">
+            <svg class="address__icon phone">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+            <a href="tel:+40729131637" class="link">+40 729 131 637</a> /
+            <a href="tel:+40726458782" class="link">+40 726 458 782</a>
+          </li>
+          <li class="address__item">
+            <svg class="address__icon mail">
+              <use href="./images/sprite.svg#icon-envelope"></use>
+            </svg>
+            <a href="mailto:office@mindblister.com" class="link">office@mindblister.com</a>
+          </li>
+        </ul>
+      </address>
+      <button class="contacts__button btn">Send message</button>
+    </div>
+  </div>
+</section>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <p class="footer__text">
+      &copy; Copyright <span class="highlighted">Mindblister</span> 2019
+    </p>
+  </div>
+  <button class="btn-top" data-top-btn>
+    <div class="btn-top__icon-wrapper">
+      <svg class="btn-top__icon">
+        <use href="./images/sprite.svg#icon-angle-down"></use>
+      </svg>
+    </div>
+  </button>
+</footer>
+    <script src="js/script.min.js"></script>
+
+  </body>
+</html>

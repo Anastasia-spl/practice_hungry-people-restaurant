@@ -1,0 +1,30 @@
+%decorative-frame {
+  width: 52%;
+  height: 52%;
+  border: 20px solid getColor("decorative-color");
+  filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
+  border-radius: 5px;
+  @media screen and (max-width: 1300px) {
+    width: 45%;
+    height: 45%;
+    border: 15px solid getColor("decorative-color");
+  }
+
+  @media screen and (max-width: 660px) {
+    border: 10px solid getColor("decorative-color");
+  }
+}
+
+%decorative-dash {
+  width: 60px;
+  height: 5px;
+  background: getColor("decorative-color");
+  border-radius: 5px;
+}
+
+%decorative-dash-longer {
+  width: 65px;
+  height: 5px;
+  background: getColor("decorative-color");
+  border-radius: 5px;
+}

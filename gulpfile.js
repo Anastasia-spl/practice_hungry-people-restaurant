@@ -6,21 +6,21 @@ let path = {
     html: project_folder + '/',
     css: project_folder + '/css/',
     js: project_folder + '/js/',
-    img: project_folder + '/img/',
+    img: project_folder + '/images/',
     fonts: project_folder + '/fonts/'
   },
   src: {
     html: [source_folder + '/*.html', "!" + source_folder + "/_*.html"],
     css: source_folder + '/scss/style.scss',
     js: source_folder + '/js/script.js',
-    img: source_folder + '/img/**/*.+(png|jpg|gif|ico|svg|webp)',
+    img: source_folder + '/images/**/*.+(png|jpg|gif|ico|svg|webp)',
     fonts: source_folder + '/fonts/*.+(ttf|otf)',
   },
   watch: {
     html: source_folder + '/**/*.html',
     css: source_folder + '/scss/**/*.scss',
     js: source_folder + '/js/**/*.js',
-    img: source_folder + '/img/**/*.+(png|jpg|gif|ico|svg|webp)',
+    img: source_folder + '/images/**/*.+(png|jpg|gif|ico|svg|webp)',
   },
   clean: "./" + project_folder + "/",
 }
@@ -62,6 +62,7 @@ function html() {
     .pipe(dest(path.build.html))
   .pipe(browsersync.stream())
 }
+
 function fonts() {
    src(path.src.fonts)
     .pipe(ttf2woff())
@@ -156,19 +157,19 @@ function images() {
   .pipe(browsersync.stream())
 }
 
-function makeSvgSprite() {
-  return gulp.src([source_folder + '/iconsprite/*.svg'])
-    .pipe(svgSprite({
-      mode: {
-        stack: {
-          sprite: "../icons/icons.svg",
-          example: true
-       }
-     }
-    }))
-    .pipe(dest(path.build.img))
-  .pipe(browsersync.stream())
-}
+// function makeSvgSprite() {
+//   return gulp.src([source_folder + '/iconsprite/*.svg'])
+//     .pipe(svgSprite({
+//       mode: {
+//         stack: {
+//           sprite: "../icons/icons.svg",
+//           example: true
+//        }
+//      }
+//     }))
+//     .pipe(dest(path.build.img))
+//   .pipe(browsersync.stream())
+// }
 
 function watchFiles(params) {
   gulp.watch([path.watch.html], html);
@@ -191,11 +192,10 @@ gulp.task('otf2ttf', function () {
   
 })
 
-
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, makeSvgSprite), fontsStyle); 
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, fontsStyle ) ); 
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
-exports.makeSvgSprite = makeSvgSprite;
+// exports.makeSvgSprite = makeSvgSprite;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;

@@ -1,0 +1,39 @@
+.footer {
+  padding: 4.5rem 0;
+  background-color: getColor(footer-bg-color);
+  @media screen and (max-width: 480px) {
+    padding: 3rem 0;
+  }
+
+  &__text {
+    @include font(400, 1.2rem, 1);
+    color: getColor(captions-on-dark);
+    text-align: center;
+  }
+}
+
+.btn-top {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    &__icon-wrapper {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      @include flexbox();
+      background-color: getColor(primary-light-color);
+      color: #333333;
+    }
+    &__icon {
+      transform: rotate(180deg);
+    }
+  }
+}

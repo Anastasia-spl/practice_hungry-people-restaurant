@@ -1,0 +1,60 @@
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="booking__wrapper">
+      <div class="booking__content-wrapper">
+        <h2 class="title">Book a table</h2>
+        <form class="booking__form">
+          <div class="booking__input-group-wrapper">
+            <div class="booking__input-group">
+              <div class="booking__form-field">
+                <input type="text" class="booking__input" placeholder="Name" />
+              </div>
+              <div class="booking__form-field">
+                <input type="tel" class="booking__input" placeholder="Phone" />
+              </div>
+              <div class="booking__form-field">
+                <input type="number" class="booking__input" placeholder="Date (mm/dd)" />
+              </div>
+            </div>
+            <div class="booking__input-group">
+              <div class="booking__form-field">
+                <input type="email" class="booking__input" placeholder="Email" />
+              </div>
+              <div class="booking__form-field">
+                <input type="number" class="booking__input" placeholder="People" />
+              </div>
+
+              <div class="booking__form-field">
+                <input type="number" class="booking__input" placeholder="Time" />
+              </div>
+            </div>
+          </div>
+          <button class="btn">Book now</button>
+        </form>
+      </div>
+      <div class="thumb img-shadow">
+        <picture class="booking__picture">
+          <source type="image/webp" srcset="
+                    ./images/watch-475.webp      475w,
+                    ./images/watch-950@2x.webp   950w,
+                    ./images/watch-1425@3x.webp 1425w
+                  " sizes="37vw" />
+          <source srcset="
+                    ./images/watch-475.jpg      475w,
+                    ./images/watch-950@2x.jpg   950w,
+                    ./images/watch-1425@3x.jpg 1425w
+                  " sizes="37vw" />
+          <img src="./images/watch.jpg" alt="Watch" />
+        </picture>
+        <div class="decorative-frame--r"></div>
+      </div>
+    </div>
+    <p class="booking__schedule">
+      Mon - Fri: <span class="highlighted">8PM - 10PM</span>, Sat - Sun:
+      <span class="highlighted">8PM - 3AM</span>, Phone:
+      <a class="highlighted link" href="tel:+40729131637">+40 729 131 637</a>
+      /
+      <a class="highlighted link" href="tel:+40726458782">+40 726 458 782</a>
+    </p>
+  </div>
+</section>

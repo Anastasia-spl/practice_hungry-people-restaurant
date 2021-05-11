@@ -1,12 +1,20 @@
-@import './basics/normalize';
-@import './basics/mixins';
-@import 'fonts';
-@import './basics/variables';
-@import './basics/commonClasses';
+@import './base/_normalize.scss';
+@import 'fonts.scss';
 
-@import '_header';
+@import './utils/_variables.scss';
+@import './utils/_mixins.scss';
+@import './utils/_placeholders.scss';
 
-// &:hover, &focus {
-// 		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-// 			0px 2px 2px rgba(0, 0, 0, 0.12);
-// 	}
+@import './base/_common.scss';
+
+@import './layouts/_about.scss';
+@import './layouts/_booking.scss';
+@import './layouts/_contacts.scss';
+@import './layouts/_events.scss';
+@import './layouts/_footer.scss';
+@import './layouts/_galerie.scss';
+@import './layouts/_header.scss';
+@import './layouts/_hero.scss';
+@import './layouts/_menu.scss';
+@import './layouts/_specialties.scss';
+@import './layouts/_team.scss';

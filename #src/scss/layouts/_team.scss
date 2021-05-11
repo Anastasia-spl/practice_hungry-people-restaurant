@@ -1,0 +1,158 @@
+.team {
+	padding-top: 4.5rem;
+	padding-bottom: 10rem;
+
+	@media screen and (max-width: 1000px) {
+		padding-bottom: 4.5rem;
+	}
+
+	background-image: repeating-linear-gradient(
+			90deg,
+			transparent,
+			transparent 20%,
+			rgba(255, 255, 255, 0.2) 1px,
+			transparent 20.08%,
+			transparent 50%,
+			rgba(255, 255, 255, 0.2) 1px,
+			transparent 50.08%,
+			transparent 80%,
+			rgba(255, 255, 255, 0.2) 80%,
+			transparent 80.08%
+		),
+		linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url('../../images/tomatoes.jpg');
+	background-size: 1440px;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	// background: repeating-linear-gradient(
+	//   90deg,
+	//   transparent,
+	//   transparent 424px,
+	//   gray 425px
+	// );
+
+	@media screen and (min-device-pixel-ratio: 2),
+		screen and (-webkit-min-device-pixel-ratio: 2),
+		screen and (-o-min-device-pixel-ratio: 2/1),
+		screen and (min-resolution: 192dpi),
+		screen and (min-resolution: 2dppx) {
+		.box {
+			background-image: repeating-linear-gradient(
+					90deg,
+					transparent,
+					transparent 20%,
+					rgba(255, 255, 255, 0.2) 1px,
+					transparent 20.08%,
+					transparent 50%,
+					rgba(255, 255, 255, 0.2) 1px,
+					transparent 50.08%,
+					transparent 80%,
+					rgba(255, 255, 255, 0.2) 80%,
+					transparent 80.08%
+				),
+				linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+				url('../images/tomatoes@2x.jpg');
+		}
+	}
+
+	@media screen and (min-device-pixel-ratio: 3),
+		screen and (-webkit-min-device-pixel-ratio: 3),
+		screen and (-o-min-device-pixel-ratio: 3/1),
+		screen and (min-resolution: 288dpi),
+		screen and (min-resolution: 3dppx) {
+		.box {
+			background-image: repeating-linear-gradient(
+					90deg,
+					transparent,
+					transparent 20%,
+					rgba(255, 255, 255, 0.2) 1px,
+					transparent 20.08%,
+					transparent 50%,
+					rgba(255, 255, 255, 0.2) 1px,
+					transparent 50.08%,
+					transparent 80%,
+					rgba(255, 255, 255, 0.2) 80%,
+					transparent 80.08%
+				),
+				linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+				url('../images/tomatoes@3x.jpg');
+		}
+	}
+}
+
+.team__subtitle {
+	position: relative;
+	@include font(400, 3.6rem, 1.33, $title-font);
+	text-align: center;
+	text-transform: uppercase;
+	color: getColor(primary-light-color);
+
+	@media screen and (max-width: 767px) {
+		@include font(400, 2.6rem, 1.33, $title-font);
+	}
+
+	&::after {
+		content: ' ';
+		display: block;
+		position: absolute;
+		left: 50%;
+		bottom: -18px;
+		transform: translateX(-50%);
+		@extend %decorative-dash;
+	}
+}
+
+.team__wrapper {
+	@include flexbox(flex-end);
+
+	@media screen and (max-width: 540px) {
+		@include flexbox(center);
+		flex-direction: column;
+	}
+}
+
+.team__content-wrapper {
+	flex-basis: 50%;
+	max-width: 600px;
+	padding: 0 2rem;
+	margin-left: 72px;
+
+	@media screen and (max-width: 1100px) {
+		margin-left: 40px;
+	}
+	@media screen and (max-width: 540px) {
+		margin-left: 0;
+	}
+}
+
+.team__text {
+	@include font(400, 1.4rem, 1.71);
+	text-align: center;
+	color: getColor(secondary-text-light);
+	@media screen and (max-width: 767px) {
+		@include font(400, 1.2rem, 1.56);
+	}
+
+	&--b {
+		@include font(700, 1.8rem, 1.56);
+		text-align: center;
+		color: getColor(secondary-text-light);
+
+		@media screen and (max-width: 767px) {
+			@include font(700, 1.4rem, 1.56);
+		}
+	}
+}
+
+.team img {
+	@media screen and (max-width: 540px) {
+		width: 220px;
+	}
+}
+
+.team .thumb {
+	@media screen and (max-width: 540px) {
+		margin-bottom: 15px;
+	}
+}

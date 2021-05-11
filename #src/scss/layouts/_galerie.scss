@@ -1,0 +1,13 @@
+.galerie__photo-wrapper {
+  @include flexbox();
+}
+
+.galerie .thumb {
+  max-width: 360px;
+}
+
+.galerie {
+  @media screen and (max-width: 610px) {
+    display: none;
+  }
+}
