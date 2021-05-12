@@ -36,15 +36,12 @@ let { src, dest } = require('gulp'),
   clean_css = require('gulp-clean-css'),
   rename = require('gulp-rename'),
   uglify = require('gulp-uglify-es').default,
-  imagemin = require('gulp-imagemin'),
-  webp = require('gulp-webp'),
-  webpcss = require('gulp-webpcss'),
   svgSprite = require('gulp-svg-sprite'),
   ttf2woff = require('gulp-ttf2woff'),
   ttf2woff2 = require('gulp-ttf2woff2'),
   fonter = require('gulp-fonter'),
-  babel = require('gulp-babel')
-  ;
+  babel = require('gulp-babel'),
+  ghPages = require('gulp-gh-pages');
 
 function browserSync(params) {
   browsersync.init({
@@ -92,13 +89,6 @@ function fontsStyle(params) {
   }
 }
 
- function cb() {
- }
-
- // Можно поменять первый параментр - название шрифта.
-// !! Необходимо проверить и поменять font-weight !
-
-
 function css() {
   return src(path.src.css)
     .pipe(
@@ -113,9 +103,7 @@ function css() {
         cascade: true,
       })
   )
-    .pipe(webpcss({
-      webpClass: '.webp', noWebpClass: '.no-webp'
-    }))
+    
     .pipe(dest(path.build.css))
     .pipe(clean_css())
     .pipe(rename({
@@ -142,34 +130,13 @@ function js() {
 
 function images() {
   return src(path.src.img)
-    .pipe(webp({
-      quality: 70
-    }))
+    
     .pipe(dest(path.build.img))
     .pipe(src(path.src.img))
-    .pipe(imagemin({
-      progressive: true,
-      svgPlugins: [{ removeViewBox: false }],
-      interlaced: true,
-      optimizationLevel: 3
-    }))
-    .pipe(dest(path.build.img))
-  .pipe(browsersync.stream())
+    
 }
 
-// function makeSvgSprite() {
-//   return gulp.src([source_folder + '/iconsprite/*.svg'])
-//     .pipe(svgSprite({
-//       mode: {
-//         stack: {
-//           sprite: "../icons/icons.svg",
-//           example: true
-//        }
-//      }
-//     }))
-//     .pipe(dest(path.build.img))
-//   .pipe(browsersync.stream())
-// }
+
 
 function watchFiles(params) {
   gulp.watch([path.watch.html], html);
@@ -192,10 +159,15 @@ gulp.task('otf2ttf', function () {
   
 })
 
+  gulp.task('deploy', function() {
+  return gulp.src([project_folder]+ '/**/*')
+    .pipe(ghPages());
+});
+
+
 let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, fontsStyle ) ); 
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
-// exports.makeSvgSprite = makeSvgSprite;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;

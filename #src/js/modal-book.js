@@ -5,18 +5,29 @@
     backdrop: document.querySelector("[data-modal-backdrop]"),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-  refs.backdrop.addEventListener("click", toggleModal);
+  refs.openModalBtn.addEventListener("click", onOpenModal);
+  refs.closeModalBtn.addEventListener("click", onCloseModal);
+  refs.backdrop.addEventListener("click", onBackdrop);
 
-  function toggleModal() {
-    refs.backdrop.classList.toggle("is-open");
+  function onOpenModal() {
+  refs.backdrop.classList.add("is-open");
+}
 
+  function onCloseModal(e) {
+    refs.backdrop.classList.remove("is-open");
+  
     if (refs.backdrop.classList.contains("is-open")) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'scroll';
     }
+  }
+
+  function onBackdrop(e) {
+    if (e.target !== refs.backdrop) {
+      return;
+    }
+    refs.backdrop.classList.remove("is-open");
   }
 
 })();

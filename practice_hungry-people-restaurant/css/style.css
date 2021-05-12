@@ -770,18 +770,12 @@ img {
   border: 3px solid rgba(51, 51, 51, 0.2);
 }
 
-.no-webp .events {
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables.jpg"); }
-
-.no-webp .events {
-  background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables.jpg"); }
-
-.no-webp .events {
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables.jpg"); }
-
 .events {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables.jpg");
+  background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables.jpg");
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables.jpg");
   background-size: 1440px;
   background-repeat: no-repeat;
   background-position: center;
@@ -875,23 +869,12 @@ img {
 }
 
 .btn-top {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.btn-top.is-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
   position: fixed;
   right: 20px;
   bottom: 20px;
-}
-
-.btn-top.is-visible__icon-wrapper {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #e8c300;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -902,11 +885,37 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ffffff;
+  background-color: transparent;
+}
+
+.btn-top:hover,
+.btn-top:focus {
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.btn-top__icon-wrapper {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e8c300;
   color: #333333;
 }
 
-.btn-top.is-visible__icon {
+.btn-top__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -1086,19 +1095,14 @@ img {
   transition: all 350ms linear;
 }
 
-.no-webp .hero {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../../images/hero.jpg"); }
-
-.no-webp .hero {
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/hero.jpg"); }
-
-.no-webp .hero {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/hero.jpg"); }
-
 .hero {
+  min-height: 100vh;
   padding-top: 32.6rem;
   padding-bottom: 8.3rem;
-  background-size: 1440px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/hero.jpg");
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero.jpg");
+  background-size: 1440px auto;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1375,6 +1379,15 @@ img {
   top: 0;
   z-index: 120;
   overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal-book__overlay.is-open .modal-book {
@@ -1390,7 +1403,9 @@ img {
   position: relative;
   background-color: #ffffff;
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem;
+  max-width: 700px;
+  border-radius: 5px;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.08), 1px 4px 6px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.08), 1px 4px 6px rgba(0, 0, 0, 0.12);
   -webkit-transform: scale(0.8);
@@ -1399,6 +1414,23 @@ img {
   -webkit-transition: all 350ms linear;
   -o-transition: all 350ms linear;
   transition: all 350ms linear;
+}
+
+.modal-book__content .booking__content-wrapper {
+  margin-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .menu {
@@ -1511,18 +1543,12 @@ img {
   letter-spacing: 0.2em;
 }
 
-.no-webp .specialties {
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables.jpg"); }
-
-.no-webp .specialties {
-  background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables.jpg"); }
-
-.no-webp .specialties {
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables.jpg"); }
-
 .specialties {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables.jpg");
+  background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables.jpg");
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables.jpg");
   background-size: 1440px;
   background-repeat: no-repeat;
   background-position: center;
@@ -1623,18 +1649,12 @@ img {
   background-color: #ffffff;
 }
 
-.no-webp .team {
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../../images/tomatoes.jpg"); }
-
-.no-webp .team {
-  background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/tomatoes.jpg"); }
-
-.no-webp .team {
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/tomatoes.jpg"); }
-
 .team {
   padding-top: 4.5rem;
   padding-bottom: 10rem;
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../../images/tomatoes.jpg");
+  background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/tomatoes.jpg");
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/tomatoes.jpg");
   background-size: 1440px;
   background-repeat: no-repeat;
   background-position: center;
@@ -2009,6 +2029,10 @@ img {
     color: #e8c300;
   }
 
+  .nav__item.galerie {
+    display: none;
+  }
+
   .hero__title {
     font-weight: 400;
     font-size: 4.5rem;
@@ -2100,6 +2124,24 @@ img {
   }
 }
 
+@media screen and (max-width: 670px) {
+  .menu__slick-btns {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -5px;
+  }
+
+  .menu__sections-item {
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+  .menu__lists-wrapper {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 660px) {
   .decorative-frame--r,
   .decorative-frame--l {
@@ -2138,28 +2180,6 @@ img {
 
   .menu {
     padding: 4.5rem 0;
-  }
-
-  .menu__slick-btns {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: -5px;
-  }
-
-  .menu__sections-item {
-    border: 1px solid rgba(51, 51, 51, 0.2);
-    border-radius: 5px;
-    margin: 5px;
-  }
-
-  .menu__lists-wrapper {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .menu__lists-wrapper {
-    display: block;
   }
 }
 
@@ -2374,217 +2394,53 @@ img {
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .no-webp .events .box {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables@2x.jpg"); }
-  .no-webp .events .box {
-    background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@2x.jpg"); }
-  .no-webp .events .box {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@2x.jpg"); }
+  .events .box {
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables@2x.jpg");
+    background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@2x.jpg");
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@2x.jpg");
+  }
 
-  .no-webp .hero {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/hero@2x.jpg"); }
+  .hero {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/hero@2x.jpg");
+    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero@2x.jpg");
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero@2x.jpg");
+  }
 
-  .no-webp .hero {
-    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero@2x.jpg"); }
+  .specialties .box {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables@2x.jpg");
+    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@2x.jpg");
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@2x.jpg");
+  }
 
-  .no-webp .hero {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero@2x.jpg"); }
-
-  .no-webp .specialties .box {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables@2x.jpg"); }
-
-  .no-webp .specialties .box {
-    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@2x.jpg"); }
-
-  .no-webp .specialties .box {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@2x.jpg"); }
-
-  .no-webp .team .box {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/tomatoes@2x.jpg"); }
-
-  .no-webp .team .box {
-    background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/tomatoes@2x.jpg"); }
-
-  .no-webp .team .box {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/tomatoes@2x.jpg"); }
+  .team .box {
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/tomatoes@2x.jpg");
+    background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/tomatoes@2x.jpg");
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/tomatoes@2x.jpg");
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-  .no-webp .events .box {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables@3x.jpg"); }
-  .no-webp .events .box {
-    background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@3x.jpg"); }
-  .no-webp .events .box {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@3x.jpg"); }
-
-  .no-webp .hero {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../../images/hero@3x.jpg"); }
-
-  .no-webp .hero {
-    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/hero@3x.jpg"); }
-
-  .no-webp .hero {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/hero@3x.jpg"); }
-
-  .no-webp .specialties .box {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables@3x.jpg"); }
-
-  .no-webp .specialties .box {
-    background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@3x.jpg"); }
-
-  .no-webp .specialties .box {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@3x.jpg"); }
-
-  .no-webp .team .box {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/tomatoes@3x.jpg"); }
-
-  .no-webp .team .box {
-    background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/tomatoes@3x.jpg"); }
-
-  .no-webp .team .box {
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/tomatoes@3x.jpg"); }
-}
-
-.webp .events { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/vegetables.webp); }
-
-.webp .events { background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables.webp); }
-
-.webp .events { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables.webp); }
-
-.webp .hero { background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../../images/hero.webp); }
-
-.webp .hero { background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../images/hero.webp); }
-
-.webp .hero { background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../images/hero.webp); }
-
-.webp .specialties { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/vegetables.webp); }
-
-.webp .specialties { background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables.webp); }
-
-.webp .specialties { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables.webp); }
-
-.webp .team { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../../images/tomatoes.webp); }
-
-.webp .team { background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../images/tomatoes.webp); }
-
-.webp .team { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../images/tomatoes.webp); }
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .events .box { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/vegetables@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .events .box { background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .events .box { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .hero { background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/hero@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .hero { background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/hero@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .hero { background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/hero@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .specialties .box { background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/vegetables@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .specialties .box { background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .specialties .box { background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .team .box { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/tomatoes@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .team .box { background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/tomatoes@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-
-  .webp .team .box { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/tomatoes@2x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .events .box { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/vegetables@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .events .box { background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .events .box { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .hero { background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../../images/hero@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .hero { background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../images/hero@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .hero { background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../images/hero@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .specialties .box { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/vegetables@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .specialties .box { background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .specialties .box { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/vegetables@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .team .box { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/tomatoes@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .team .box { background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/tomatoes@3x.webp); }
-}
-
-@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (-o-min-device-pixel-ratio: 3 / 1), screen and (-o-min-device-pixel-ratio: 3/1), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
-
-  .webp .team .box { background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/tomatoes@3x.webp); }
+  .events .box {
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables@3x.jpg");
+    background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@3x.jpg");
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@3x.jpg");
+  }
+
+  .hero {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/hero@3x.jpg");
+    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero@3x.jpg");
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero@3x.jpg");
+  }
+
+  .specialties .box {
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/vegetables@3x.jpg");
+    background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@3x.jpg");
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/vegetables@3x.jpg");
+  }
+
+  .team .box {
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/tomatoes@3x.jpg");
+    background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/tomatoes@3x.jpg");
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/tomatoes@3x.jpg");
+  }
 }

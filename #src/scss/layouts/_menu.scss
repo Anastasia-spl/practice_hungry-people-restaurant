@@ -1,134 +1,130 @@
 .menu {
-  padding: 10rem 0;
+	padding: 10rem 0;
 
-  @media screen and (max-width: 1100px) {
-    padding-top: 4.5rem;
-  }
-  @media screen and (max-width: 610px) {
-    padding: 4.5rem 0;
-  }
+	@media screen and (max-width: 1100px) {
+		padding-top: 4.5rem;
+	}
+	@media screen and (max-width: 610px) {
+		padding: 4.5rem 0;
+	}
 }
 
 .menu .title {
-  margin-bottom: 40px;
-  @media screen and (max-width: 480px) {
-    margin-bottom: 20px;
-  }
+	margin-bottom: 40px;
+	@media screen and (max-width: 480px) {
+		margin-bottom: 20px;
+	}
 }
 
 .menu__caption {
-  max-width: 565px;
-  @include font(700, 1.8rem, 1.56);
-  text-align: center;
-  color: getColor(primary-dark-color);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
+	max-width: 565px;
+	@include font(700, 1.8rem, 1.56);
+	text-align: center;
+	color: getColor(primary-dark-color);
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
 
-  @media screen and (max-width: 1040px) {
-    @include font(700, 1.6rem, 1.56);
-    margin-bottom: 40px;
-  }
+	@media screen and (max-width: 1040px) {
+		@include font(700, 1.6rem, 1.56);
+		margin-bottom: 40px;
+	}
 
-  @media screen and (max-width: 767px) {
-    @include font(700, 1.4rem, 1.56);
-  }
+	@media screen and (max-width: 767px) {
+		@include font(700, 1.4rem, 1.56);
+	}
 }
 
 .menu__slick-btns {
-  @include flexbox();
-  margin-bottom: 50px;
+	@include flexbox();
+	margin-bottom: 50px;
 
-  @media screen and (max-width: 610px) {
-    flex-wrap: wrap;
-    margin: -5px;
-  }
+	@media screen and (max-width: 670px) {
+		flex-wrap: wrap;
+		margin: -5px;
+	}
 }
 
 .menu__sections-item {
-  @media screen and (max-width: 610px) {
-    border: 1px solid rgba(51, 51, 51, 0.2);
-    border-radius: 5px;
-    margin: 5px;
-  }
+	@media screen and (max-width: 670px) {
+		border: 1px solid rgba(51, 51, 51, 0.2);
+		border-radius: 5px;
+		margin: 5px;
+	}
 
-  &:not(:last-child) {
-    border-right: 1px solid rgba(51, 51, 51, 0.2);
-  }
+	&:not(:last-child) {
+		border-right: 1px solid rgba(51, 51, 51, 0.2);
+	}
 }
 
 .menu__sections-button {
-  width: 120px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  outline-color: rgba(51, 51, 51, 0.2);
+	width: 120px;
+	height: 50px;
+	background-color: transparent;
+	border: none;
+	outline-color: rgba(51, 51, 51, 0.2);
 
-  @media screen and (max-width: 1040px) {
-    width: 100px;
-  }
+	@media screen and (max-width: 1040px) {
+		width: 100px;
+	}
 
-  @include font(700, 1.2rem, 1.5);
-  text-transform: uppercase;
-  text-align: center;
-  color: getColor(secondary-dark-color);
+	@include font(700, 1.2rem, 1.5);
+	text-transform: uppercase;
+	text-align: center;
+	color: getColor(secondary-dark-color);
 
-  transition: $cubic;
-  &:hover,
-  &:focus {
-    color: getColor(decorative-color);
-  }
+	transition: $cubic;
+	&:hover,
+	&:focus {
+		color: getColor(decorative-color);
+	}
 }
 
 .menu__lists-wrapper {
-  @include flexbox();
+	@include flexbox();
 
-  @media screen and (max-width: 600px) {
-    display: block;
-  }
-
-  @media screen and (max-width: 610px) {
-    display: none;
-  }
+	@media screen and (max-width: 670px) {
+		display: none;
+	}
 }
 
 .menu__content-list {
-  max-width: 363px;
-  @media screen and (max-width: 1040px) {
-    max-width: 220px;
-  }
+	max-width: 363px;
+	@media screen and (max-width: 1040px) {
+		max-width: 220px;
+	}
 
-  &:not(:last-child) {
-    margin-right: 87px;
+	&:not(:last-child) {
+		margin-right: 87px;
 
-    @media screen and (max-width: 1100px) {
-      margin-right: 65px;
-    }
-  }
+		@media screen and (max-width: 1100px) {
+			margin-right: 65px;
+		}
+	}
 }
 
 .menu__content-item {
-  &:not(:last-child) {
-    margin-bottom: 32px;
-  }
+	&:not(:last-child) {
+		margin-bottom: 32px;
+	}
 }
 .menu__name,
 .menu__price {
-  @include font(400, 1.8rem, 1, $title-font);
+	@include font(400, 1.8rem, 1, $title-font);
 
-  @media screen and (max-width: 767px) {
-    @include font(400, 1.4rem, 1, $title-font);
-  }
+	@media screen and (max-width: 767px) {
+		@include font(400, 1.4rem, 1, $title-font);
+	}
 }
 
 .menu__name-consist {
-  @include font(400, 1.2rem, 1.5);
-  color: getColor(captions-on-light);
-  margin: 0;
+	@include font(400, 1.2rem, 1.5);
+	color: getColor(captions-on-light);
+	margin: 0;
 }
 .menu__item-dots {
-  letter-spacing: 0.2em;
-  //   display: flex;
-  //   border-bottom: 3px dotted getColor(secondary-dark-color);
-  //   flex-grow: 1;
+	letter-spacing: 0.2em;
+	//   display: flex;
+	//   border-bottom: 3px dotted getColor(secondary-dark-color);
+	//   flex-grow: 1;
 }

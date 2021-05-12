@@ -159,3 +159,9 @@
 		transition: all 350ms linear;
 	}
 }
+
+.nav__item.galerie {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}

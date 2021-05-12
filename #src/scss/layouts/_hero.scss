@@ -1,4 +1,5 @@
 .hero {
+	min-height: 100vh;
 	padding-top: 32.6rem;
 	padding-bottom: 8.3rem;
 
@@ -20,8 +21,8 @@
 			rgba(0, 0, 0, 0.6),
 			rgba(0, 0, 0, 0.6)
 		),
-		url('../../images/hero.jpg');
-	background-size: 1440px;
+		url('../images/hero.jpg');
+	background-size: 1440px auto;
 	background-repeat: no-repeat;
 	background-position: center;
 
@@ -48,7 +49,7 @@
 				rgba(0, 0, 0, 0.6),
 				rgba(0, 0, 0, 0.6)
 			),
-			url('../../images/hero@3x.jpg');
+			url('../images/hero@3x.jpg');
 	}
 }
 
@@ -370,6 +371,7 @@
 			top: 0;
 			z-index: 120;
 			overflow-y: scroll;
+			@include flexbox();
 
 			.modal-book {
 				transform: scale(1);
@@ -381,11 +383,18 @@
 		position: relative;
 		background-color: getColor(primary-light-color);
 		text-align: center;
-		padding: 2rem 0;
-
+		padding: 2rem;
+		max-width: 700px;
+		border-radius: 5px;
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.08),
 			1px 4px 6px rgba(0, 0, 0, 0.12);
 		transform: scale(0.8);
 		transition: all 350ms linear;
 	}
+}
+
+.modal-book__content .booking__content-wrapper {
+	margin-right: 0;
+	@include flexbox();
+	flex-direction: column;
 }

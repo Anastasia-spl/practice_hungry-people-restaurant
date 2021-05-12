@@ -18,15 +18,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-(function () {
-  var _document$querySelect = document.querySelector(".header").getBoundingClientRect(),
-      pageHeaderHeight = _document$querySelect.height;
-
-  document.body.style.paddingTop = "".concat(pageHeaderHeight, "px");
-})();
-
-; // куда? (класс объекта) ,  когда? (ширина экрана) , каким по счету должен стать? (одна цифра/ first/last) 
-
+// куда? (класс объекта) ,  когда? (ширина экрана) , каким по счету должен стать? (одна цифра/ first/last) 
 var DynamicAdapt = /*#__PURE__*/function () {
   function DynamicAdapt(type) {
     _classCallCheck(this, DynamicAdapt);
@@ -218,10 +210,17 @@ da.init();
     } else body.style.overflow = "auto";
   });
   mobileMenuRef.addEventListener('click', function (event) {
-    if (event.target.classList.contains('nav__mobile-overlay')) {
-      mobileMenuRef.classList.remove("is-open");
+    var expanded = burgerBtnRef.getAttribute("aria-expanded") === "true" || false;
+
+    if (event.target.classList.contains('mobile-nav__overlay') || event.target.tagName === 'A') {
+      mobileMenuRef.classList.toggle("is-open");
+      burgerBtnRef.classList.toggle("is-open");
+      burgerBtnRef.setAttribute("aria-expanded", !expanded);
       body.style.overflow = "auto";
-    }
+    } // console.dir(event.target.tagName === 'A')
+    // if (event.target.tagName === 'A') {
+    // }
+
   });
 })();
 
@@ -233,12 +232,16 @@ da.init();
     closeModalBtn: document.querySelector("[data-close-modal-book]"),
     backdrop: document.querySelector("[data-modal-backdrop]")
   };
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-  refs.backdrop.addEventListener("click", toggleModal);
+  refs.openModalBtn.addEventListener("click", onOpenModal);
+  refs.closeModalBtn.addEventListener("click", onCloseModal);
+  refs.backdrop.addEventListener("click", onBackdrop);
 
-  function toggleModal() {
-    refs.backdrop.classList.toggle("is-open");
+  function onOpenModal() {
+    refs.backdrop.classList.add("is-open");
+  }
+
+  function onCloseModal(e) {
+    refs.backdrop.classList.remove("is-open");
 
     if (refs.backdrop.classList.contains("is-open")) {
       document.body.style.overflow = 'hidden';
@@ -246,47 +249,19 @@ da.init();
       document.body.style.overflow = 'scroll';
     }
   }
+
+  function onBackdrop(e) {
+    if (e.target !== refs.backdrop) {
+      return;
+    }
+
+    refs.backdrop.classList.remove("is-open");
+  }
 })();
 
 ;
 var btnTop = document.querySelector('[data-top-btn]');
-var sentinel = document.querySelector('[data-btn-top-sentinel]');
-var hero = document.querySelector('.hero'); // const isVisible = function (target) {
-//   // Все позиции элемента
-//   var targetPosition = {
-//       top: window.pageYOffset + target.getBoundingClientRect().top,
-//       left: window.pageXOffset + target.getBoundingClientRect().left,
-//       right: window.pageXOffset + target.getBoundingClientRect().right,
-//       bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-//     },
-//     // Получаем позиции окна
-//     windowPosition = {
-//       top: window.pageYOffset,
-//       left: window.pageXOffset,
-//       right: window.pageXOffset + document.documentElement.clientWidth,
-//       bottom: window.pageYOffset + document.documentElement.clientHeight
-//     };
-//   if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-//     targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-//     targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-//     targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-//     // Если элемент полностью видно, то запускаем следующий код
-//     return;
-//   } else {
-//     // Если элемент не видно, то запускаем этот код
-//     console.dir(window)
-//     btn.classList.add('is-visible');
-//   };
-// };
-// // Запускаем функцию при прокрутке страницы
-// window.addEventListener('scroll', function() {
-//   isVisible(hero);
-// });
-// // А также запустим функцию сразу. А то вдруг, элемент изначально видно
-// isVisible(hero);
-// btn.classList.add('is-visible');
-
-btn.addEventListener('click', function (e) {
+btnTop.addEventListener('click', function (e) {
   return window.scrollTo({
     behavior: "smooth",
     top: top
@@ -296,52 +271,6 @@ var btn = document.querySelector('[data-hero-btn]');
 btn.addEventListener('click', function (e) {
   return window.scrollTo({
     behavior: 'smooth',
-    top: document.documentElement.clientHeight
+    top: (0, document.querySelector(".hero").scrollHeight)
   });
-});
-
-function ibg() {
-  var ibg = document.querySelectorAll("._ibg");
-
-  for (var i = 0; i < ibg.length; i++) {
-    if (ibg[i].querySelector('img')) {
-      if (document.querySelector('body').classList.contains("no-webp")) {
-        if (window.devicePixelRatio === 2) {
-          ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('picture img').getAttribute('srcset').split(',')[1].split('.')[0] + ".png";
-        } else {
-          ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('picture img').getAttribute('src') + ')';
-        }
-      } else {
-        if (window.devicePixelRatio === 2) {
-          var path = "" + ibg[i].querySelector('picture source').getAttribute('srcset').split(',')[1].split('.')[0] + ".webp";
-          ibg[i].style.backgroundImage = 'url(' + path + ')';
-        } else {
-          var _path = "" + ibg[i].querySelector('picture img').getAttribute('src').split('.')[0] + ".webp";
-
-          ibg[i].style.backgroundImage = 'url(' + _path + ')';
-        }
-      }
-    }
-  }
-}
-
-ibg();
-;
-
-function testWebP(callback) {
-  var webP = new Image();
-
-  webP.onload = webP.onerror = function () {
-    callback(webP.height == 2);
-  };
-
-  webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-
-testWebP(function (support) {
-  if (support == true) {
-    document.querySelector('body').classList.add('webp');
-  } else {
-    document.querySelector('body').classList.add('no-webp');
-  }
 });
