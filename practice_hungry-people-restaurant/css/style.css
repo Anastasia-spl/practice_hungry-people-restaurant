@@ -1652,9 +1652,9 @@ img {
 .team {
   padding-top: 4.5rem;
   padding-bottom: 10rem;
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../../images/tomatoes.jpg");
-  background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/tomatoes.jpg");
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/tomatoes.jpg");
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/tomatoes.jpg");
+  background-image: -o-repeating-linear-gradient(left, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/tomatoes.jpg");
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 20%, rgba(255, 255, 255, 0.2) 1px, transparent 20.08%, transparent 50%, rgba(255, 255, 255, 0.2) 1px, transparent 50.08%, transparent 80%, rgba(255, 255, 255, 0.2) 80%, transparent 80.08%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/tomatoes.jpg");
   background-size: 1440px;
   background-repeat: no-repeat;
   background-position: center;
